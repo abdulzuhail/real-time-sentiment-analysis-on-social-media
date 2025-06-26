@@ -88,17 +88,16 @@ The goal of this project is to monitor social media conversations in real-time a
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
-```bash
 git clone https://github.com/abdulzuhail/Real-Time-Sentiment-Analysis.git
 cd Real-Time-Sentiment-Analysis
 ### 2️⃣ Create Virtual Environment
 python -m venv sentiment_env
 source sentiment_env/bin/activate  # On Windows: sentiment_env\Scripts\activate
 pip install -r requirements.txt
-3️⃣ Run Streamlit App
+### 3️⃣ Run Streamlit App
 cd app
 streamlit run dashboard.py
-4️⃣ Run Data Collection & Analysis Scripts
+### 4️⃣ Run Data Collection & Analysis Scripts
 You can schedule these using cron or APScheduler
 python scripts/data_collection.py
 python scripts/sentiment_analysis.py
@@ -106,7 +105,7 @@ python scripts/emotion_detection.py
 python scripts/anomaly_detection.py
 python scripts/sentiment_forecasting.py
 
-📊 Dashboard Features
+### 📊 Dashboard Features
 Live Sentiment Trends by time and location
 Emotion Heatmaps
 Top Posts with High Emotion Scores
@@ -114,17 +113,31 @@ Anomaly Alerts
 Downloadable Reports & Charts
 Filters by Platform, Emotion, and Date Range
 
-📈 Sample Insights
+### 📈 Sample Insights
 🥇 Peak negative emotion spikes detected during major news events
 🌍 Anger and fear often dominant in specific geo-regions
 📅 Highest emotional engagement seen on weekends
 🔔 Alerts triggered when sudden fear or anger levels rise
 
-🚀 Future Enhancements
+### 🚀 Future Enhancements
 Add Twitter and YouTube integration
 Deploy mobile-friendly dashboard
 Real-time notifications via email/Slack
 Support multilingual sentiment detection
 
+### 🔔 Alert System  
+![Homepage](https://github.com/abdulzuhail/real-time-sentiment-analysis-on-social-media/raw/main/Homepage.png)
+
+### 📈 Sentiment Forecasting  
+![Forecasting](https://github.com/abdulzuhail/real-time-sentiment-analysis-on-social-media/raw/main/Forecasting.png)
+
+### 🌐 Streamlit Sentiment Dashboard  
+![Streamlit Dashboard](https://github.com/abdulzuhail/real-time-sentiment-analysis-on-social-media/raw/main/Streamlit%20Dashboard.png)
+
+### 🧨 Anomalous Posts  
+![Anomalous Posts](https://github.com/abdulzuhail/real-time-sentiment-analysis-on-social-media/raw/main/Anomalous%20Post.png)
+
+### 🎭 Emotion Distribution  
+![Emotion Distribution](https://github.com/abdulzuhail/real-time-sentiment-analysis-on-social-media/raw/main/Emotion%20Distribution.png)
 
 
