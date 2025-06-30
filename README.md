@@ -62,29 +62,7 @@ The goal of this project is to monitor social media conversations in real-time a
 
 ## 🗂️ Project Structure
 
-├── api/
-│ ├── sentiment_api.py
-│ ├── emotion_api.py
-│ └── geo_api.py
-├── app/
-│ └── dashboard.py
-├── frontend/
-│ ├── components/
-│ ├── pages/
-│ └── styles/
-├── data/
-│ ├── emotion_analysis_results.csv
-│ ├── sentiment_trends.csv
-│ └── ...
-├── scripts/
-│ ├── data_collection.py
-│ ├── sentiment_analysis.py
-│ ├── emotion_detection.py
-│ ├── anomaly_detection.py
-│ └── sentiment_forecasting.py
-├── requirements.txt
-└── README.md
-
+<pre> ├── api/ │ ├── sentiment_api.py │ ├── emotion_api.py │ └── geo_api.py ├── app/ │ └── dashboard.py ├── frontend/ │ ├── components/ │ ├── pages/ │ └── styles/ ├── data/ │ ├── emotion_analysis_results.csv │ ├── sentiment_trends.csv │ └── ... ├── scripts/ │ ├── data_collection.py │ ├── sentiment_analysis.py │ ├── emotion_detection.py │ ├── anomaly_detection.py │ └── sentiment_forecasting.py ├── requirements.txt └── README.md </pre>
 ---
 
 ## ⚙️ Setup Instructions
