@@ -1,6 +1,8 @@
 # 💬 Real-Time Sentiment Analysis Using Social Media
 
 A full-stack, real-time sentiment and emotion analysis system that collects, analyzes, and visualizes social media data—primarily from Reddit—to uncover public opinion, emotional trends, and anomalies. This project uses cutting-edge **transformer models (BERT, RoBERTa)** along with **FastAPI**, **Streamlit**, and **Power BI** to deliver real-time insights for businesses, researchers, and analysts.
+
+---
 🎥 **[Live Demo Video](https://github.com/abdulzuhail/real-time-sentiment-analysis-on-social-media/blob/main/Live%20Demo.mp4)**
 
 ---
