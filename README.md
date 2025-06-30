@@ -99,19 +99,30 @@ git clone https://github.com/abdulzuhail/Real-Time-Sentiment-Analysis.git
 cd Real-Time-Sentiment-Analysis
 ```
 ### 2️⃣ Create Virtual Environment
+
+```bash
 python -m venv sentiment_env
 source sentiment_env/bin/activate  # On Windows: sentiment_env\Scripts\activate
 pip install -r requirements.txt
+```
+
 ### 3️⃣ Run Streamlit App
+
+```bash
 cd app
 streamlit run dashboard.py
+```
+
 ### 4️⃣ Run Data Collection & Analysis Scripts
-You can schedule these using cron or APScheduler
+
+```bash
+# You can schedule these using cron or APScheduler
 python scripts/data_collection.py
 python scripts/sentiment_analysis.py
 python scripts/emotion_detection.py
 python scripts/anomaly_detection.py
 python scripts/sentiment_forecasting.py
+```
 
 ### 📊 Dashboard Features
 Live Sentiment Trends by time and location
