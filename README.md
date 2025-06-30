@@ -1,6 +1,6 @@
 # 💬 Real-Time Sentiment Analysis Using Social Media
 
-A full-stack, real-time sentiment and emotion analysis system that collects, analyzes, and visualizes social media data—primarily from Reddit—to uncover public opinion, emotional trends, and anomalies. This project uses cutting-edge **transformer models (BERT, RoBERTa)** along with **FastAPI**, **Streamlit**, and **Power BI** to deliver real-time insights for businesses, researchers, and analysts.
+A full-stack, real-time sentiment and emotion analysis system that collects, analyzes, and visualizes social media data—primarily from Reddit—to uncover public opinion, emotional trends, and anomalies. This project uses cutting-edge **transformer models (BERT, RoBERTa)** along with **FastAPI**, **Streamlit**, to deliver real-time insights for businesses, researchers, and analysts.
 
 ---
 🎥 **[Live Demo Video](https://github.com/abdulzuhail/real-time-sentiment-analysis-on-social-media/blob/main/Live%20Demo.mp4)**
@@ -33,13 +33,13 @@ The goal of this project is to monitor social media conversations in real-time a
   Detects emotional surges using statistical and ML-based methods.
 
 - 📉 **Forecasting**  
-  Predicts future sentiment trends using **ARIMA/LSTM**.
+  Predicts future sentiment trends using **Prophet**.
 
 - 🌍 **Geo-Based Analysis**  
   Maps sentiment/emotion trends across locations.
 
 - 📊 **Interactive Dashboards**  
-  Built using **Streamlit**, **Power BI**, and **React** for real-time visualization.
+  Built using **Streamlit** and **React** for real-time visualization.
 
 - 📤 **Automated Reporting**  
   Scheduled scripts generate sentiment reports every 10 minutes.
