@@ -94,10 +94,10 @@ The goal of this project is to monitor social media conversations in real-time a
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
-'''
+```bash
 git clone https://github.com/abdulzuhail/Real-Time-Sentiment-Analysis.git
 cd Real-Time-Sentiment-Analysis
-'''
+```
 ### 2️⃣ Create Virtual Environment
 python -m venv sentiment_env
 source sentiment_env/bin/activate  # On Windows: sentiment_env\Scripts\activate
