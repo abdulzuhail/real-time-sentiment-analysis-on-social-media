@@ -62,14 +62,42 @@ The goal of this project is to monitor social media conversations in real-time a
 
 ## 🗂️ Project Structure
 
-<pre> ├── api/ │ ├── sentiment_api.py │ ├── emotion_api.py │ └── geo_api.py ├── app/ │ └── dashboard.py ├── frontend/ │ ├── components/ │ ├── pages/ │ └── styles/ ├── data/ │ ├── emotion_analysis_results.csv │ ├── sentiment_trends.csv │ └── ... ├── scripts/ │ ├── data_collection.py │ ├── sentiment_analysis.py │ ├── emotion_detection.py │ ├── anomaly_detection.py │ └── sentiment_forecasting.py ├── requirements.txt └── README.md </pre>
+
+<pre>
+├── api/
+│   ├── sentiment_api.py
+│   ├── emotion_api.py
+│   └── geo_api.py
+├── app/
+│   └── dashboard.py
+├── frontend/
+│   ├── components/
+│   ├── pages/
+│   └── styles/
+├── data/
+│   ├── emotion_analysis_results.csv
+│   ├── sentiment_trends.csv
+│   └── ...
+├── scripts/
+│   ├── data_collection.py
+│   ├── sentiment_analysis.py
+│   ├── emotion_detection.py
+│   ├── anomaly_detection.py
+│   └── sentiment_forecasting.py
+├── requirements.txt
+└── README.md
+</pre>
+
+---
 ---
 
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
+'''
 git clone https://github.com/abdulzuhail/Real-Time-Sentiment-Analysis.git
 cd Real-Time-Sentiment-Analysis
+'''
 ### 2️⃣ Create Virtual Environment
 python -m venv sentiment_env
 source sentiment_env/bin/activate  # On Windows: sentiment_env\Scripts\activate
