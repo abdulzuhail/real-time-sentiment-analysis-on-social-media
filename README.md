@@ -1,129 +1,115 @@
-# 💬 Real-Time Sentiment Analysis Using Social Media
+# 📊 Real-Time Sentiment Analysis on Social Media
 
-A full-stack, real-time sentiment and emotion analysis system that collects, analyzes, and visualizes social media data—primarily from Reddit—to uncover public opinion, emotional trends, and anomalies. This project uses cutting-edge **transformer models (BERT, RoBERTa)** along with **FastAPI**, **Streamlit**, to deliver real-time insights for businesses, researchers, and analysts.
+This project is a real-time sentiment analysis system designed to monitor and analyze public opinion from Reddit. It leverages NLP, deep learning, and anomaly detection to extract meaningful insights from live social media data.
 
----
-🎥 **[Live Demo Video](https://github.com/abdulzuhail/real-time-sentiment-analysis-on-social-media/blob/main/Live%20Demo.mp4)**
+## 🚀 Project Overview
 
----
+With the increasing volume of user-generated content on platforms like Reddit, understanding sentiment in real-time is crucial for businesses, researchers, and policymakers. This system collects live Reddit posts, classifies sentiment and emotions, detects anomalies, and visualizes insights through an interactive dashboard.
 
-## 📌 Project Objective
+## 🧠 Features
 
-The goal of this project is to monitor social media conversations in real-time and:
-- Detect **sentiment** (positive, negative, neutral)
-- Recognize **emotions** (joy, anger, fear, sadness, etc.)
-- Identify **anomalies or emotional spikes**
-- Forecast sentiment trends
-- Visualize all results in an interactive dashboard
+- **Real-Time Data Collection** using Reddit API (PRAW)
+- **Sentiment Classification** using BERT (Positive, Negative, Neutral)
+- **Emotion Detection** using RoBERTa (Joy, Anger, Sadness, etc.)
+- **Sarcasm Detection** using VADER
+- **Anomaly Detection** with Isolation Forest
+- **Time-Series Forecasting** using Prophet
+- **Multilingual Translation** using Deep Translator
+- **Geographical Analysis** from user-provided locations
+- **Interactive Dashboard** built using Streamlit and React
 
----
+## 🧰 Tech Stack
 
-## 🧠 Key Features
+- **Backend**: Python, FastAPI, PRAW, Hugging Face Transformers, Scikit-learn, Prophet, Deep Translator
+- **Frontend**: ReactJS, Streamlit
+- **Visualization**: Plotly, Matplotlib
+- **Deployment**: Scheduled scripts run every 10 minutes to update data and analysis
 
-- 🔁 **Live Reddit Streaming**  
-  Continuously fetches posts using Reddit’s API filtered by geography and keywords.
-
-- 🧹 **NLP Preprocessing Pipeline**  
-  Includes tokenization, translation (if needed), stopword removal, and text normalization.
-
-- 💬 **Sentiment & Emotion Detection**  
-  Uses fine-tuned **BERT** and **RoBERTa** models to classify text into sentiment and emotion categories.
-
-- 🚨 **Anomaly Detection**  
-  Detects emotional surges using statistical and ML-based methods.
-
-- 📉 **Forecasting**  
-  Predicts future sentiment trends using **Prophet**.
-
-- 🌍 **Geo-Based Analysis**  
-  Maps sentiment/emotion trends across locations.
-
-- 📊 **Interactive Dashboards**  
-  Built using **Streamlit** and **React** for real-time visualization.
-
-- 📤 **Automated Reporting**  
-  Scheduled scripts generate sentiment reports every 10 minutes.
-
+## 📂 Project Structure
 ---
 
-## 🧱 Tech Stack
 
-| Component        | Tool/Tech Used                         |
-|------------------|----------------------------------------|
-| Backend          | FastAPI, Python                        |
-| NLP Models       | BERT, RoBERTa (via Hugging Face)       |
-| Frontend         | Streamlit, React.js                    |                              |
-| Data Collection  | Reddit API (PRAW / Pushshift)          |
-| Forecasting      | Prophet                           |
-| Scheduler        | Cron / APScheduler                     |
-| Visualization    | Plotly          |
-
----
 
 ## 🗂️ Project Structure
 
 
 <pre>
 ├── api/
-│   ├── sentiment_api.py
-│   ├── emotion_api.py
-│   └── geo_api.py
+│ ├── api.py
+│ ├── geo_api.py
+│ ├── insights_api.py
+│ ├── sentiment_data_api.py
+│ └── trends_api.py
 ├── app/
-│   └── dashboard.py
-├── frontend/
-│   ├── components/
-│   ├── pages/
-│   └── styles/
-├── data/
-│   ├── emotion_analysis_results.csv
-│   ├── sentiment_trends.csv
-│   └── ...
+│ └── dashboard.py
 ├── scripts/
-│   ├── data_collection.py
-│   ├── sentiment_analysis.py
-│   ├── emotion_detection.py
-│   ├── anomaly_detection.py
-│   └── sentiment_forecasting.py
+│ ├── data_collection.py
+│ ├── preprocessing.py
+│ ├── emotion_detection.py
+│ ├── sentiment_analysis.py
+│ ├── anomaly_detection.py
+│ └── sentiment_forecasting.py
+├── frontend/
+│ ├── components/
+│ ├── pages/
+│ ├── styles/
+│ └── App.js
+├── data/
+│ └── [CSV and JSON output files]
+├── logs/
 ├── requirements.txt
 └── README.md
 </pre>
 
 ---
----
 
-## ⚙️ Setup Instructions
+## 📈 Dashboard Preview
 
-### 1️⃣ Clone the Repository
+The dashboard displays:
+- Live sentiment and emotion trends
+- Anomalous posts with filtering
+- Geographical emotion mapping
+- Recent posts and alerts
+- Predictive sentiment trends
+
+## 🧪 How to Run
+
+### 1. Clone the repository
+
 ```bash
-git clone https://github.com/abdulzuhail/Real-Time-Sentiment-Analysis.git
-cd Real-Time-Sentiment-Analysis
+git clone https://github.com/yourusername/real-time-sentiment-analysis.git
+cd real-time-sentiment-analysis
 ```
-### 2️⃣ Create Virtual Environment
-
+### 2. Install dependencies
 ```bash
-python -m venv sentiment_env
-source sentiment_env/bin/activate  # On Windows: sentiment_env\Scripts\activate
 pip install -r requirements.txt
 ```
-
-### 3️⃣ Run Streamlit App
-
-```bash
-cd app
-streamlit run dashboard.py
-```
-
-### 4️⃣ Run Data Collection & Analysis Scripts
+### 3. Run backend scripts (schedule via cron or Task Scheduler)
 
 ```bash
-# You can schedule these using cron or APScheduler
 python scripts/data_collection.py
-python scripts/sentiment_analysis.py
+python scripts/preprocessing.py
 python scripts/emotion_detection.py
+python scripts/sentiment_analysis.py
 python scripts/anomaly_detection.py
 python scripts/sentiment_forecasting.py
 ```
 
+### 4. Start FastAPI
+```bash
+uvicorn api.api:app --reload --port 8005
+```
+### 5. Start the dashboard
+```bash
+cd app
+streamlit run dashboard.py
+```
+### 6. Start React Frontend
+```bash
+cd frontend
+npm install
+npm start
+```
 ### 📊 Dashboard Features
 Live Sentiment Trends by time and location
 Emotion Heatmaps
@@ -138,11 +124,6 @@ Filters by Platform, Emotion, and Date Range
 📅 Highest emotional engagement seen on weekends
 🔔 Alerts triggered when sudden fear or anger levels rise
 
-### 🚀 Future Enhancements
-Add Twitter and YouTube integration
-Deploy mobile-friendly dashboard
-Real-time notifications via email/Slack
-Support multilingual sentiment detection
 
 ## Screenshots
 ### 🔔 Alert System  
@@ -160,4 +141,4 @@ Support multilingual sentiment detection
 ### 🎭 Emotion Distribution  
 ![Emotion Distribution](https://github.com/abdulzuhail/real-time-sentiment-analysis-on-social-media/raw/main/Emotion%20Distribution.png)
 
-
+🎥 **[Live Demo Video](https://github.com/abdulzuhail/real-time-sentiment-analysis-on-social-media/blob/main/Live%20Demo.mp4)**
