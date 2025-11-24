@@ -27,12 +27,6 @@ With the increasing volume of user-generated content on platforms like Reddit, u
 
 ## 📂 Project Structure
 ---
-
-
-
-## 🗂️ Project Structure
-
-
 <pre>
 ├── api/
 │ ├── api.py
