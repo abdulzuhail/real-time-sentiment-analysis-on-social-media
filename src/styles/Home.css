@@ -1,0 +1,212 @@
+/* Home Container */
+.home-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 50px;
+  text-align: center;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.home-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Alert Banner */
+.alert-banner {
+  margin: 30px auto;
+  padding: 25px 30px;
+  max-width: 600px;
+  background: linear-gradient(135deg, #fff0f0 0%, #ffecec 100%);
+  color: #e74c3c;
+  border-left: 5px solid #e74c3c;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  box-shadow: 
+    0 5px 15px rgba(231, 76, 60, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.alert-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(231, 76, 60, 0.05) 0%, rgba(231, 76, 60, 0) 100%);
+  pointer-events: none;
+}
+
+/* OK Button */
+.ok-button {
+  margin-top: 20px;
+  padding: 12px 32px;
+  background: linear-gradient(to right, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 4px 15px rgba(231, 76, 60, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ok-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, #c0392b, #a5281b);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.ok-button:hover::before {
+  width: 100%;
+}
+
+.ok-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 7px 20px rgba(231, 76, 60, 0.4),
+    0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ok-button:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 3px 10px rgba(231, 76, 60, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+/* Dashboard and Chart Links */
+.dashboard-link,
+.chart-link {
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 4px 15px rgba(52, 152, 219, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dashboard-link::before,
+.chart-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, #2980b9, #1a5276);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.dashboard-link:hover::before,
+.chart-link:hover::before {
+  width: 100%;
+}
+
+.dashboard-link:hover,
+.chart-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 7px 20px rgba(52, 152, 219, 0.4),
+    0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-link:active,
+.chart-link:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 3px 10px rgba(52, 152, 219, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .dashboard-link,
+  .chart-link {
+    width: 100%;
+  }
+}

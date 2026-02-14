@@ -1,0 +1,88 @@
+/* Predictions Container */
+.predictions-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.predictions-container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+}
+.back-button-container {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .back-button {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    color: #0056b3;
+  }
+  
+/* Heading */
+h2 {
+    color: #34495e;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+/* Paragraph */
+p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+/* Sentiment Trends Section */
+.sentiment-trends {
+    margin-top: 40px;
+    padding: 25px;
+    background: #f7f7f7;
+    border-radius: 14px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.sentiment-trends:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .predictions-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .sentiment-trends {
+        padding: 18px;
+    }
+}

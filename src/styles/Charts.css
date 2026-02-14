@@ -1,0 +1,120 @@
+/* Anomaly Section */
+.anomaly-section {
+  margin-top: 40px;
+  background-color: #f4f8fb;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid #dde4f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.anomaly-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.anomaly-section h2 {
+  color: #d32f2f;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.anomaly-section h2::before {
+  content: "⚠️";
+  font-size: 1.5rem;
+}
+
+.anomaly-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.anomaly-table th,
+.anomaly-table td {
+  padding: 18px 20px;
+  border: 1px solid #ececec;
+  text-align: left;
+  vertical-align: top;
+  font-family: 'Poppins', sans-serif;
+}
+
+.anomaly-table th {
+  background-color: #f7f7f7;
+  color: #444;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.anomaly-table td {
+  background-color: #fff;
+  color: #555;
+}
+
+.anomaly-table td:first-child {
+  max-width: 600px;
+  word-break: break-word;
+  white-space: normal;
+}
+.back-button-container {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #0056b3;
+}
+
+/* Button Styling */
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 35px;
+  background: #6a11cb;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.download-btn:hover {
+  background: #2575fc;
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+  .anomaly-section {
+    padding: 20px;
+  }
+
+  .anomaly-table th,
+  .anomaly-table td {
+    padding: 12px 14px;
+  }
+
+  .download-btn {
+    padding: 12px 28px;
+    font-size: 16px;
+  }
+}
