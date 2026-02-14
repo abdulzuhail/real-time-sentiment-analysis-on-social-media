@@ -44,8 +44,8 @@ def extract_location(text, flair):
 
 # Authenticate Reddit API
 reddit = praw.Reddit(
-    client_id="RhQ80jVTKqMjz1vmaW0V-w",
-    client_secret="dpbiFsyk5fLi1mAQbu3mwvueyA5q7A",
+    client_id="your reddit id",
+    client_secret="your reddit secret key",
     user_agent="SentimentAnalyzer:v1.0 (by u/Beneficial_Trust_507)"
 )
 
@@ -87,3 +87,4 @@ if __name__ == "__main__":
     df.to_csv("data/geo_sentiment.csv", index=False, encoding="utf-8")
     print(f"✅ Saved {len(df)} posts to data/geo_sentiment.csv")
     print(df.head())
+
